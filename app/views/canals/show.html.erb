@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @canal.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @canal.image %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @canal.state %>
+</p>
+
+<%= link_to 'Edit', edit_canal_path(@canal) %> |
+<%= link_to 'Back', canals_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: canal, local: true) do |form| %>
+  <% if canal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(canal.errors.count, "error") %> prohibited this canal from being saved:</h2>
+
+      <ul>
+      <% canal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :canal_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :canal_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.check_box :state, id: :canal_state %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
