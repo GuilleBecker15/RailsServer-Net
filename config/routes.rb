@@ -3,8 +3,7 @@ Rails.application.routes.draw do
 	root "debugger#index"
 	
 	get 'debugger/index'
-	
-	# For details on the DSL available within this file, 
-	# see http://guides.rubyonrails.org/routing.html
+
+	get '/canales', to: 'debugger#canales', as: 'canales'
 
 end
